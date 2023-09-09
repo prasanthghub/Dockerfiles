@@ -40,11 +40,6 @@ pipeline {
     timeout(time: 2, unit: 'HOURS')
   }
 
-  triggers {
-    cron('H 10 * * 1-5')
-    pollSCM('H/2 * * * *')
-  }
-
   stages {
     stage ('Checkout') {
       steps {
